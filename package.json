@@ -1,10 +1,13 @@
 {
-  "name": "PosGraphQL",
+  "name": "posgraphql",
   "version": "1.0.0",
-  "description": "A simple mart server application, using typescript,graphql,postgresql and nodejs",
+  "description": "A simple mart server application, using typescript, graphql, postgresql and node",
   "main": "main.js",
   "repository": "https://github.com/DanielAdek/PosGraphQL.git",
   "author": "DanielAdek <maildaniel.me1@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "typescript": "^5.1.6"
+  }
 }

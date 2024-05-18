@@ -1,7 +1,7 @@
 import fs from 'fs';
 import cors from 'cors';
 import express from 'express';
-import { gql } from 'apollo-server';
+import {gql, GraphQLSchemaModule} from 'apollo-server';
 
 export default class AppConfig {
   private server = express();
@@ -29,12 +29,12 @@ export default class AppConfig {
   public getLogOnServerStart(): void {
     const message = "  App is running at http://localhost:%d in %s mode";
 
-		console.info(message, this.getServerPort(), "development");
+    console.info(message, this.getServerPort(), "development");
 		 
-	  console.info("  **Press CTRL + C to stop**");
+    console.info("  **Press CTRL + C to stop**");
   }
 
-  public getGraphQlSchema(): string {
+  public getGraphQlSchema() {
     const pathToFile = require.resolve("../schema/type-def.gql");
     return gql`${fs.readFileSync(pathToFile, "utf-8")}`;
   }

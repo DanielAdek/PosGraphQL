@@ -17,6 +17,6 @@ export default class SimpleMartServer {
   }
 
   public runApplication(): void {
-		 this.appConfig.getApplicationServer().listen(this.appConfig.getServerPort(), this.appConfig.getLogOnServerStart);
+    this.appConfig.getApplicationServer().listen(this.appConfig.getServerPort(), this.appConfig.getLogOnServerStart);
   }
 }
